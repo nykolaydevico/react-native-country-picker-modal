@@ -311,17 +311,27 @@ componentDidUpdate (prevProps) {
   }
 
   renderCountry(cca2, index) {
-    const country = countries[cca2];
-
+    const country = countries[cca2]
     return (
-      <TouchableOpacity
+      <View
         key={index}
-        onPress={() => this.onSelectCountry(cca2)}
-        activeOpacity={0.99}
-        testID={`country-selector-${country.name.common}`}
+        onStartShouldSetResponder={() => true}
+        onResponderRelease={() => this.onSelectCountry(cca2)}
       >
-        {this.renderCountryDetail(cca2)}
-      </TouchableOpacity>
+        <View style={styles.itemCountry}>
+          {CountryPicker.renderFlag(cca2)}
+          <View style={styles.itemCountryName}>
+            <Text style={styles.countryName} allowFontScaling={false}>
+              {this.getCountryName(country)}
+              {this.props.showCallingCode && country.callingCode &&
+                <Text style={styles.callingCode}>
+                  {` (+${country.callingCode})`}
+                </Text>
+              }
+            </Text>
+          </View>
+        </View>
+      </View>
     )
   }
 
@@ -339,23 +349,6 @@ componentDidUpdate (prevProps) {
           </Text>
         </View>
       </TouchableOpacity>
-    )
-  }
-
-  renderCountryDetail(cca2) {
-    const country = countries[cca2]
-    return (
-      <View style={styles.itemCountry}>
-        {!this.props.hideCountryFlag && CountryPicker.renderFlag(cca2)}
-        <View style={styles.itemCountryName}>
-          <Text style={styles.countryName} allowFontScaling>
-            {this.getCountryName(country)}
-          </Text>
-          {this.props.showCallingCode &&
-          country.callingCode &&
-          <Text style={styles.countryCode}>{`+${country.callingCode}`}</Text>}
-        </View>
-      </View>
     )
   }
 
@@ -440,6 +433,7 @@ componentDidUpdate (prevProps) {
                   initialNumToRender={30}
                   renderItem={country => this.renderCountry(country.item.key)}
                   keyExtractor={(item) => item.key}
+                  style={styles.listView}
                   getItemLayout={(data, index) => (
                     { length: this.itemHeight, offset: this.itemHeight * index, index }
                   )}
