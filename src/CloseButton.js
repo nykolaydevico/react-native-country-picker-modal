@@ -28,7 +28,7 @@ const CloseButtonAndroid = (props) => (
 const CloseButtonDefault = (props) => (
   <View style={props.styles[0]}>
     <TouchableOpacity onPress={props.onPress}>
-      <Image source={props.closeImage} style={props.styles[1]} />
+      <Image source={props.image} style={props.styles[1]} />
     </TouchableOpacity>
   </View>
 )

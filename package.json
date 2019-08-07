@@ -1,11 +1,10 @@
 {
-  "_from": "nykolaydevico-react-native-country-picker-modal@0.8.0",
-  "_id": "nykolaydevico-react-native-country-picker-modal@0.8.0",
+  "_from": "github:aleksandrdevico/react-native-country-picker-modal",
+  "_id": "react-native-country-picker-modal@0.6.2",
   "_inBundle": false,
-  "_integrity": "sha512-XUvjNsQDPlJGsY6WZEkoce+n9ZmRIKQIImKyhf1nFQQhynhAVe+NaKyH+wTQsQuxd4zzVuxx47KwC+R3VGcuqw==",
-  "_location": "/nykolaydevico-react-native-country-picker-modal",
+  "_integrity": "",
+  "_location": "/react-native-country-picker-modal",
   "_phantomChildren": {
-    "hoist-non-react-statics": "2.5.5",
     "isomorphic-fetch": "2.2.1",
     "loose-envify": "1.4.0",
     "object-assign": "4.1.1",
@@ -14,26 +13,25 @@
     "ua-parser-js": "0.7.20"
   },
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nykolaydevico-react-native-country-picker-modal@0.8.0",
-    "name": "nykolaydevico-react-native-country-picker-modal",
-    "escapedName": "nykolaydevico-react-native-country-picker-modal",
-    "rawSpec": "0.8.0",
-    "saveSpec": null,
-    "fetchSpec": "0.8.0"
+    "type": "git",
+    "raw": "react-native-country-picker-modal@github:aleksandrdevico/react-native-country-picker-modal",
+    "name": "react-native-country-picker-modal",
+    "escapedName": "react-native-country-picker-modal",
+    "rawSpec": "github:aleksandrdevico/react-native-country-picker-modal",
+    "saveSpec": "github:aleksandrdevico/react-native-country-picker-modal",
+    "fetchSpec": null,
+    "gitCommittish": null
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nykolaydevico-react-native-country-picker-modal/-/nykolaydevico-react-native-country-picker-modal-0.8.0.tgz",
-  "_shasum": "d0e4f385ded0ff37bc25479783cda8d0b8648d1e",
-  "_spec": "nykolaydevico-react-native-country-picker-modal@0.8.0",
+  "_resolved": "github:aleksandrdevico/react-native-country-picker-modal#92603bcefbbbc77559e2afb3a0fc3c4804ce1576",
+  "_spec": "react-native-country-picker-modal@github:aleksandrdevico/react-native-country-picker-modal",
   "_where": "/Users/admin/Documents/rn-qudini-kiosk",
   "author": {
     "name": "Xavier Carpentier",
     "email": "contact@xaviercarpentier.com",
-    "url": "https://xaviercarpentier.com/"
+    "url": "http://xaviercarpentier.com/"
   },
   "bugs": {
     "url": "https://github.com/xcarpentier/react-native-country-picker-modal/issues"
@@ -41,10 +39,9 @@
   "bundleDependencies": false,
   "dependencies": {
     "fuse.js": "2.6.2",
-    "lodash": "4.17.14",
+    "lodash": "^4.17.10",
     "node-emoji": "1.8.1",
     "prop-types": "15.6.0",
-    "react-native-safe-area-view": "^0.7.0",
     "world-countries": "1.8.0"
   },
   "deprecated": false,
@@ -52,32 +49,33 @@
   "devDependencies": {
     "@types/react": "^16.4.6",
     "@types/react-native": "^0.55.26",
-    "babel-cli": "6.14.0",
-    "babel-eslint": "6.1.2",
-    "babel-jest": "23.0.1",
-    "babel-preset-react-native": "4.0.0",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb": "^10.0.0",
-    "eslint-plugin-async": "0.1.1",
-    "eslint-plugin-babel": "3.3.0",
-    "eslint-plugin-import": "^1.12.0",
-    "eslint-plugin-jsx-a11y": "^2.0.1",
-    "eslint-plugin-react": "^6.0.0",
-    "eslint-plugin-react-native": "2.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-preset-react-native": "^5.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.2.1",
     "flow-bin": "^0.57.3",
-    "jest": "^23.1.0",
-    "react": "16.0.0",
-    "react-native": "0.50.3",
-    "react-test-renderer": "16.0.0",
-    "regenerator-runtime": "0.11.1",
-    "typescript": "^2.9.2"
+    "jest": "^23.5.0",
+    "react": "^16.4.1",
+    "react-native": "^0.56.0",
+    "react-test-renderer": "^16.4.2",
+    "regenerator-runtime": "0.11.1"
   },
   "homepage": "https://github.com/xcarpentier/react-native-country-picker-modal#readme",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/example/"
-    ]
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
   },
   "keywords": [
     "react-native",
@@ -91,7 +89,7 @@
   "name": "nykolaydevico-react-native-country-picker-modal",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nykolaydevico/react-native-country-picker-modal.git"
+    "url": "git+https://github.com/xcarpentier/react-native-country-picker-modal.git"
   },
   "scripts": {
     "bump-major-push": "yarn version --new-version `./scripts/version_increment.js major` && git push --follow-tags",
@@ -106,6 +104,6 @@
     "lint": "eslint ./src",
     "test": "node_modules/jest/bin/jest.js"
   },
-  "types": "src/CountryPicker.d.ts",
-  "version": "0.8.0"
+  "types": "src/index.d.ts",
+  "version": "0.6.2"
 }

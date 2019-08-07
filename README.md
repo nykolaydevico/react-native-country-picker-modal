@@ -199,7 +199,6 @@ const darkTheme = StyleSheet.create({
 | closeButtonImage  | React.element| default close button Image                                                                               | Custom close button Image
 | flagType  | string | 'emoji' on iOS, 'flat' on Android | If set, overwrites the default OS based flag type.
 | hideAlphabetFilter  | bool | false | If set to true, prevents the alphabet filter rendering
-| showCountryNameWithFlag   | bool  | false | If set, then country name will appear next to flag in the view
 | showCallingCode | bool | false | If set to true, Country Picker List will show calling code after country name `United States (+1)`
 | renderFilter  | Function | undefined | If 'filterable={true}' and renderFilter function is provided, render custom filter component.\*
 
@@ -250,6 +249,3 @@ Feel free to [contact me](mailto:contact@xaviercarpentier.com) or [create an iss
 ## Licence
 
 [MIT](https://github.com/xcarpentier/react-native-country-picker-modal/blob/master/LICENSE.md)
-
-## Hire an expert!
-Looking for a ReactNative freelance expert with more than 12 years experience? Contact me from my [website](https://xaviercarpentier.com)!
